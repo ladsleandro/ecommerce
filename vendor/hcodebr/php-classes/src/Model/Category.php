@@ -167,5 +167,4 @@ class Category extends Model
         ];
     }
 
-
 }
