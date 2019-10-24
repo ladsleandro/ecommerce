@@ -250,6 +250,8 @@ $app->post('/register', function (){
         exit;
     }
 
+    $_SESSION['registerValues'] = null;
+
     $user = new User();
     $user->setData([
         'inadmin' => 0,
