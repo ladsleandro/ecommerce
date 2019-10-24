@@ -29,7 +29,6 @@ $app->get('/admin/categories', function (){
         ]);
     }
 
-    $categories = Category::listAll();
     $page = new PageAdmin();
 
     $page->setTpl("categories", array(

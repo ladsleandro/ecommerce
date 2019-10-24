@@ -151,7 +151,7 @@ class Product extends Model
         $results = $sql->select("
             SELECT SQL_CALC_FOUND_ROWS * 
             FROM tb_products 
-            WHERE desproduct LIKE :search
+            WHERE desproduct  LIKE :search
             ORDER BY desproduct    
             LIMIT $start, $itemPerPage;
          ", [':search' => '%'.$search.'%']);
@@ -163,6 +163,5 @@ class Product extends Model
             'pages' => ceil($resultTotal[0]["nrtotal"] / $itemPerPage)
         ];
     }
-
 
 }
